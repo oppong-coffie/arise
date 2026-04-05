@@ -1,0 +1,845 @@
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Navbar */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(20px);
+  padding: 1.25rem 5vw;
+  border-bottom: 1px solid var(--border);
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.navbar-logo img {
+  height: 2rem;
+}
+
+.navbar-menu {
+  display: flex;
+  gap: 2.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-menu a {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.navbar-menu a:hover {
+  color: var(--accent);
+}
+
+/* Home Page Sections */
+.home-page {
+  flex: 1;
+  padding: 0 5vw;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.hero, .about-section, .flagship-section, .newsletter-section {
+  padding: 10vh 0;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto 4rem;
+}
+
+.hero-content h1 {
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-weight: 800;
+  color: var(--text-h);
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+}
+
+.hero-content p {
+  font-size: 1.125rem;
+  color: var(--text);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.hero-image-container img {
+  width: 100%;
+  height: 70vh;
+  object-fit: cover;
+  border-radius: 2rem;
+  box-shadow: var(--shadow);
+}
+
+/* About Section */
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4rem;
+}
+
+.about-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.about-text h1 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: var(--text-h);
+}
+
+.about-image-card {
+  flex: 1.2;
+  min-width: 300px;
+  position: relative;
+  height: 60vh;
+  border-radius: 2rem;
+  overflow: hidden;
+}
+
+.about-image-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-image-card .overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);
+  display: flex;
+  align-items: flex-end;
+  padding: 2rem;
+}
+
+.about-image-card .overlay p {
+  color: white;
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+/* Flagship Section */
+.flagship-header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 5rem;
+}
+
+.flagship-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.flagship-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.flagship-card {
+  flex: 1;
+  min-width: 300px;
+  position: relative;
+  height: 60vh;
+  border-radius: 2rem;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.flagship-card:hover {
+  transform: translateY(-10px);
+}
+
+.flagship-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.flagship-card .overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);
+  display: flex;
+  align-items: flex-end;
+  padding: 2rem;
+  z-index: 1;
+}
+
+.flagship-card .overlay p {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+/* Newsletter Section */
+.newsletter-card {
+  position: relative;
+  height: 70vh;
+  border-radius: 2rem;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  padding: 4rem;
+}
+
+.newsletter-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.newsletter-content {
+  max-width: 450px;
+}
+
+.newsletter-content h1 {
+  color: white;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.newsletter-content p {
+  color: rgba(255,255,255,0.9);
+  font-size: 1.125rem;
+}
+
+/* Footer */
+.footer {
+  background: #B374E7;
+  color: white;
+  padding: 10vh 5vw 4rem;
+  margin-top: auto;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 3rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.footer-section h3 {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  font-weight: 600;
+}
+
+.footer-logo {
+  height: 2.5rem;
+  margin-bottom: 1.5rem;
+  filter: brightness(0) invert(1);
+}
+
+.footer-section.brand h2 {
+  color: white;
+  margin-bottom: 1rem;
+  font-size: 1.75rem;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-section li {
+  margin-bottom: 1rem;
+}
+
+.footer-section a {
+  color: rgba(255,255,255,0.8);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-section a:hover {
+  color: white;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.2);
+  margin-top: 4rem;
+  padding-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.social-links {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.social-links a {
+  color: white;
+  font-size: 1.5rem;
+}
+
+/* About Page Sections */
+.story-section, .mission-values-section, .team-section, .impact-section {
+  padding: 10vh 0;
+}
+
+/* Story Section */
+.story-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 5rem;
+}
+
+.story-content {
+  flex: 1.5;
+  min-width: 300px;
+}
+
+.story-content h1 {
+  font-size: 3rem;
+  line-height: 1.2;
+  margin: 1.5rem 0 3rem;
+  color: var(--text-h);
+}
+
+.tag {
+  color: var(--accent);
+  text-transform: capitalize;
+  font-weight: 500;
+  display: block;
+}
+
+.story-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  line-height: 1.7;
+}
+
+.story-image-card {
+  flex: 1;
+  min-width: 350px;
+  position: relative;
+  border-radius: 2rem;
+  overflow: hidden;
+  height: min-content;
+}
+
+.story-image-card img {
+  width: 100%;
+  display: block;
+}
+
+.story-image-card .overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 2rem;
+  background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+}
+
+.story-image-card .name {
+  color: white;
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* Mission & Values */
+.mission-values-section {
+  text-align: center;
+}
+
+.section-label {
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 1.25rem;
+  display: block;
+  margin-bottom: 2rem;
+}
+
+.mission-container h2 {
+  font-size: clamp(1.5rem, 4vw, 2.75rem);
+  line-height: 1.2;
+  font-weight: 600;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.values-container {
+  margin-top: 15vh;
+}
+
+.values-intro {
+  max-width: 800px;
+  margin: 2rem auto 8rem;
+  line-height: 1.6;
+}
+
+.values-grid {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  flex-wrap: wrap;
+}
+
+.value-card {
+  flex: 1;
+  min-width: 250px;
+  text-align: left;
+}
+
+.value-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--text-h);
+  font-weight: 700;
+}
+
+/* Team Section */
+.team-header {
+  text-align: center;
+  margin-bottom: 8rem;
+}
+
+.team-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 4rem 2rem;
+}
+
+.team-card {
+  text-align: center;
+}
+
+.team-image-wrapper {
+  background-color: #f5f5f5;
+  aspect-ratio: 1/1;
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+
+.team-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.team-card:hover .team-image-wrapper img {
+  transform: scale(1.05);
+}
+
+.team-info h3 {
+  font-size: 1.5rem;
+  margin: 1.5rem 0 0.5rem;
+  font-weight: 600;
+}
+
+.role {
+  color: var(--text);
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+.desc {
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: #888;
+  padding: 0 1rem;
+}
+
+/* Impact Section */
+.impact-header {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.impact-header h1 {
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  line-height: 1.2;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.impact-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.impact-card {
+  flex: 1;
+  min-width: 320px;
+  position: relative;
+  height: 60vh;
+  border-radius: 2rem;
+  overflow: hidden;
+}
+
+.impact-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.impact-card .overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);
+  display: flex;
+  align-items: flex-end;
+  padding: 2rem;
+}
+
+.impact-card .overlay p {
+  color: white;
+  font-size: 1.75rem;
+  font-weight: 500;
+}
+
+/* Why Page Sections */
+.why-hero-section, .empowerment-section {
+  padding: 10vh 0;
+}
+
+/* Why Hero Section */
+.why-hero-container {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  gap: 5rem;
+}
+
+.why-hero-content {
+  flex: 1;
+}
+
+.why-hero-content h1 {
+  font-size: 3rem;
+  line-height: 1.2;
+  margin: 1.5rem 0 3rem;
+  color: var(--text-h);
+}
+
+.why-hero-content p {
+  line-height: 1.6;
+  color: var(--text);
+}
+
+.why-hero-image-card {
+  flex: 1.2;
+  position: relative;
+  height: 60vh;
+  border-radius: 2rem;
+  overflow: hidden;
+}
+
+.why-hero-image-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.why-hero-image-card .overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);
+  display: flex;
+  align-items: flex-end;
+  padding: 2rem;
+  z-index: 1;
+}
+
+.why-hero-image-card .overlay p {
+  color: white;
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* Empowerment Section */
+.empowerment-header {
+  text-align: left;
+  margin-bottom: 5rem;
+}
+
+.empowerment-header h1 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-bottom: 2rem;
+}
+
+.empowerment-header p {
+  max-width: 1000px;
+  line-height: 1.6;
+}
+
+.empowerment-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.empowerment-card {
+  position: relative;
+  height: 60vh;
+  border-radius: 2rem;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.empowerment-card:hover {
+  transform: translateY(-10px);
+}
+
+.empowerment-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.empowerment-card .overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);
+  display: flex;
+  align-items: flex-end;
+  padding: 2rem;
+  z-index: 1;
+}
+
+.empowerment-card .overlay p {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+/* A Day In Tech Page Sections */
+.aday-about-section, .app-features-section, .aday-flagship-section, .download-section {
+  padding: 10vh 0;
+}
+
+/* Aday About Section */
+.aday-about-header {
+  text-align: center;
+  margin-bottom: 8rem;
+}
+
+.aday-about-header h1 {
+  font-size: 3rem;
+  margin-bottom: 3rem;
+}
+
+.aday-about-text {
+  max-width: 1100px;
+  margin: 0 auto;
+  line-height: 1.7;
+  color: var(--text);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.focus-areas-grid {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  flex-wrap: wrap;
+}
+
+.focus-card {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+
+.focus-icon {
+  font-size: 2.5rem;
+  color: var(--accent);
+}
+
+.focus-content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--text-h);
+}
+
+/* App Features Section */
+.app-features-section {
+  background-color: var(--accent);
+  color: white;
+  border-radius: 3rem;
+  margin: 5rem 0;
+  padding: 10vh 5%;
+}
+
+.app-features-container {
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+}
+
+.app-features-content {
+  flex: 1;
+}
+
+.app-features-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+.app-features-content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.app-features-content li {
+  font-size: 1.1rem;
+  margin-bottom: 1.25rem;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.app-features-content li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: white;
+}
+
+.app-mockup-container {
+  flex: 1;
+  text-align: center;
+}
+
+.app-mockup-container img {
+  max-width: 80%;
+  height: auto;
+  filter: drop-shadow(0 20px 50px rgba(0,0,0,0.3));
+}
+
+/* Aday Flagship Section */
+.aday-flagship-header {
+  text-align: center;
+  margin-bottom: 8rem;
+}
+
+.aday-flagship-header h1 {
+  font-size: 2.5rem;
+  margin: 1.5rem 0 2rem;
+}
+
+.aday-flagship-header p {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.aday-flagship-grid {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.aday-flagship-card {
+  flex: 1;
+  min-width: 320px;
+  height: 50vh;
+  position: relative;
+  border-radius: 2rem;
+  overflow: hidden;
+}
+
+.aday-flagship-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.aday-flagship-card .overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);
+  display: flex;
+  align-items: flex-end;
+  padding: 2rem;
+  z-index: 1;
+}
+
+.aday-flagship-card .overlay p {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+/* Download Section */
+.download-section {
+  text-align: center;
+}
+
+.download-container img {
+  max-width: 400px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.download-container img:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 1024px) {
+  .app-features-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .app-features-content li {
+    padding-left: 0;
+  }
+  .app-features-content li::before {
+    display: none;
+  }
+}
+
+
+

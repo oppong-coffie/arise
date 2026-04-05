@@ -13,7 +13,7 @@ const Empowerment: React.FC = () => {
   return (
     <section className="empowerment-section">
       <div className="empowerment-header">
-        <div className='text-5xl font-extrabold mb-7'>Empowering Africa through Technology Education</div>
+        <h1 className='text-5xl font-extrabold mb-7'>Empowering Africa through Technology Education</h1>
         <p>
           Arise is dedicated to bridging the technology gap in Africa by providing 
           accessible tech education. Founded to prepare the African market for 

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import logo from '../../assets/Logo.png';
 
 const Footer: React.FC = () => {
@@ -16,24 +17,24 @@ const Footer: React.FC = () => {
         <div className="footer-section">
           <h3>Site</h3>
           <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/about">About Us</a></li>
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/about">About Us</Link></li>
           </ul>
         </div>
         
         <div className="footer-section">
           <h3>Company</h3>
           <ul>
-            <li><a href="/why">Why Arise Labs</a></li>
-            <li><a href="/aday">A Day in A Tech</a></li>
-            <li><a href="/team">Team</a></li>
+            <li><Link to="/why">Why Arise Labs</Link></li>
+            <li><Link to="/aday">A Day in A Tech</Link></li>
+            <li><Link to="/team">Team</Link></li>
           </ul>
         </div>
         
         <div className="footer-section">
           <h3>Contact</h3>
           <ul>
-            <li><a href="/contact">Contact us</a></li>
+            <li><Link to="/contact">Contact us</Link></li>
           </ul>
         </div>
       </div>
